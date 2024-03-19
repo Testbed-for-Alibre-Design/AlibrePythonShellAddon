@@ -12,4 +12,8 @@ https://code.google.com/archive/p/ironlab/
 https://github.com/caadxyz/RhinoPythonShell
 
 
-I don't have time to maintain this project; here is the code.
+I don't have time to maintain this project: here is the code.
+
+Installer:
+
+https://github.com/Testbed-for-Alibre-Design/AlibrePythonShellAddon/releases/tag/v2024.03.19
