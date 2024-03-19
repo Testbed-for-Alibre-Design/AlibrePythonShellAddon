@@ -1,10 +1,10 @@
-﻿<AlibreDesignAddOn specificationVersion="2" friendlyName="AlibrePythonShellAddon 1">
-<Author name="AuthorName" link="https://github.com/Testbed-for-Alibre-Design/AlibrePythonShell"/>
-   <Copyright>Copyright (c) 2023</Copyright>
+﻿<AlibreDesignAddOn specificationVersion="2" friendlyName="Alibre Python Shell">
+<Author name="Testbed for Alibre Design" link="https://github.com/Testbed-for-Alibre-Design/AlibrePythonShellAddon"/>
+   <Copyright>Copyright (c) 2024</Copyright>
    <DLL type="Managed" loadedWhen="Startup" location="AlibrePythonShell.dll"/>
    <Icon location="logo.ico"/> 
-   <Menu text="AlibrePythonShellAddon 1"/>
-   <Description>AlibrePythonShellAddon</Description> 
+   <Menu text="Alibre Python Shell"/>
+   <Description>Alibre Python Shell Addon</Description> 
    <Workspace type="Always"/>
-   <Property name="Identifier" value="AlibrePythonShellAddon"/>
+   <Property name="Identifier" value="AlibrePythonShell"/>
 </AlibreDesignAddOn>

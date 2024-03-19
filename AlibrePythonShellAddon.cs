@@ -24,7 +24,6 @@ namespace AlibrePythonShellAddon
             _alibreRoot = alibreRoot;
             _parentWinHandle = parentWinHandle;
    
-            //PythonShell.Topmost = true;
             BuildMenuTree();
         }
         public int RootMenuItem => MenuIdRoot;
@@ -55,9 +54,9 @@ namespace AlibrePythonShellAddon
         {
             switch (menuId)
             {
-                case MenuIdRoot: return "Global IronPython Console";
+                case MenuIdRoot: return "Alibre Python Shell";
             }
-            return "Global IronPython Console";
+            return "Alibre Python Shell";
         }
         public bool PopupMenu(int menuId)
         {
@@ -93,7 +92,7 @@ namespace AlibrePythonShellAddon
         {
             switch (menuId)
             {
-                case MenuIdUtils: return "Global IronPython Console";
+                case MenuIdUtils: return "Alibre Python Shell";
             }
             return "";
         }
@@ -103,7 +102,7 @@ namespace AlibrePythonShellAddon
              {
                case MenuIdUtils: return "logo.ico";
              }
-            return "Global IronPython Console";
+            return "Alibre Python Shell";
         }
         public bool HasPersistentDataToSave(string sessionIdentifier)
         {
@@ -116,28 +115,15 @@ namespace AlibrePythonShellAddon
             {
                 case MenuIdUtils:
                 {
-                    return LauncherAddonCmd(session);
+                    return InvokeAddonCmd(session);
                 }
             }
             return null;
         }
-        private void OpenNewWindowOnSeparateThread()
+        private IAlibreAddOnCommand InvokeAddonCmd(IADSession currentSession)
         {
-
-        }
-        private IAlibreAddOnCommand LauncherAddonCmd(IADSession currentSession)
-        {
-            
-            System.Windows.MessageBox.Show("AlibrePythonShell Addon", "Global IronPython ConsoleCommand");
-            
-            //Window cliW = new IronPython.
-
-            Window PythonShell = new MainWindow(currentSession);
-            PythonShell.ShowDialog();
-            //PythonShell.ShowDialog();
-            //PythonShell.Topmost = true;
-            // Create a new thread;
-            
+            var winform = new Form1(currentSession);
+            winform.Show();
             return null;
         }
         public void SaveData(IStream pCustomData, string sessionIdentifier)
@@ -148,7 +134,7 @@ namespace AlibrePythonShellAddon
         }
         public bool UseDedicatedRibbonTab()
         {
-            return true;
+            return false;
         }
         public void LoadData(IStream pCustomData, string sessionIdentifier)
         {

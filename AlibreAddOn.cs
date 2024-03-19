@@ -15,10 +15,6 @@ namespace AlibreAddOnAssembly
             AlibreRoot = (IADRoot) pAutomationHook.Root;
             _parentWinHandle = hwnd;
             _laucherAddonHandle = new AlibrePythonShellAddon.AlibrePythonShellAddon(AlibreRoot, _parentWinHandle);
-            IADSession currentSession = AlibreRoot.TopmostSession;
-            var PythonShell = new MainWindow(currentSession);
-            var winform = new Form1(currentSession);
-            winform.Show();
         }
         public static IADRoot GetRoot()
         {
